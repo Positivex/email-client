@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" >
   <head>
-    <title>Angular Material - Starter App</title>
+    <title>My first email client</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,26 +13,9 @@
     <link rel="stylesheet" href="./css/app.css"/>
   </head>
 
-  <body ng-app="app" layout="row">
+  <body ng-app="app">
 
-  <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
-    <md-toolbar class="md-whiteframe-z1">
-      <h1>Emails</h1>
-    </md-toolbar>
-  </md-sidenav>
-
-
-  <div flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2">
-    <md-toolbar layout="row" class="md-whiteframe-z1">
-      <md-button class="menu" aria-label="Show User List">
-        <md-icon md-svg-icon="menu" ></md-icon>
-      </md-button>
-      <h1>My first email client</h1>
-    </md-toolbar>
-
-    <md-content flex id="content">
-    </md-content>
-  </div>
+    <ng-view></ng-view>
 
     <script src="./libs/angular/angular.js"></script>
     <script src="./libs/angular-animate/angular-animate.js"></script>

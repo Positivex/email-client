@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ngMaterial']);
+var app = angular.module('app', ['ngMaterial', 'ngRoute']);
 
 app.config(function($mdThemingProvider, $mdIconProvider){
 	$mdIconProvider
@@ -14,3 +14,15 @@ app.config(function($mdThemingProvider, $mdIconProvider){
 		.primaryPalette('indigo')
 		.accentPalette('pink');
 });
+
+app.config(function($routeProvider) {
+	$routeProvider.when('/', {
+		templateUrl: 'templates/home.html',
+		controller: 'HomeController'
+	})
+	.otherwise({redirectTo: '/'})
+});
+
+app.controller('HomeController', function() {
+	
+})
